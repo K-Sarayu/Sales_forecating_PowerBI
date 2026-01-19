@@ -1,0 +1,7 @@
+Total Sales = SUM('Date and model wise sale'[Sales])
+Average Sales = AVERAGE('Date and model wise sale'[Sales])
+Sales Growth % =DIVIDE(
+    [Total Sales] -
+    CALCULATE([Total Sales], PREVIOUSMONTH('Date and model wise sale'[Date])),
+    CALCULATE([Total Sales], PREVIOUSMONTH('Date and model wise sale'[Date]))
+)
